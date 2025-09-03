@@ -1,0 +1,30 @@
+v<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>mynt eller krone</h1>
+    <img id="coinImage" alt="Venter på resultat..." width="300" />
+    <p>
+        <button onclick="kastMynt()">Kast mynt eller krone</button> <!--lager en knappen og kjører kast mynt funskjonen.-->
+    </p>
+    <script>
+        // Funksjon: Velger tilfeldig mellom krone og mynt og oppdaterer bildet
+        function kastMynt() { //definerer en funskjon som heter kastmynt
+            var imageElement = document.getElementById('coinImage'); // henter bilde med id coin image 
+            if (Math.random() < 0.5) { // gir et random tall mallom en og to hvis tallet er mindre 0.5 så kommer krone.jpg
+                imageElement.src = 'krone.jpg';// bestemmer vilket bilde som skal vises
+               
+            } else {
+                imageElement.src = 'mynt.jpg';
+                
+            }
+        }
+        // Init: Kjør funksjonen én gang for å vise et startresultat
+     kastMynt();
+    </script>
+</body>
+</html>
